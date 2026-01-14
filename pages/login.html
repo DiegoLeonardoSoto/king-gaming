@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+  </head>
+  <body>
+    <header>
+      <!-- Navbar -->
+      <nav class="container">
+        <ul>
+          <li>
+            <a class="logo" href="../index.html">
+              <img src="../img/logo-color.svg" alt="logo" srcset="" />
+            </a>
+          </li>
+          <li>
+            <details>
+              <summary>Productos</summary>
+              <ul>
+                <li>
+                  <a href="pages/page1.html">Mouse</a>
+                </li>
+
+                <li>
+                  <a href="pages/page2.html">Teclado</a>
+                </li>
+
+                <li>
+                  <a href="pages/page3.html">Mouse PAD</a>
+                </li>
+
+                <li>
+                  <a href="pages/page4.html">Joystick</a>
+                </li>
+              </ul>
+            </details>
+          </li>
+        </ul>
+
+        <ul>
+          <li>
+            <!-- Buscar -->
+            <div class="search-wrapper">
+              <form
+                class="search-container"
+                action="#"
+                role="search"
+                aria-label="Buscar"
+              >
+                <label for="site-search" class="visually-hidden">Buscar</label>
+                <input
+                  id="site-search"
+                  class="search-input"
+                  type="text"
+                  name="q"
+                  placeholder="Buscar..."
+                />
+                <button class="search-btn" type="submit" aria-label="Buscar">
+                  <img
+                    class="icon"
+                    src="../img/searchIcon.svg"
+                    alt="icon search"
+                  />
+                </button>
+              </form>
+            </div>
+          </li>
+
+          <!-- Login -->
+          <li>
+            <a class="link-icon" href="../pages/login.html">
+              <img src="../img/loginIcon.svg" alt="Login icon" />
+            </a>
+          </li>
+
+          <!-- Cart -->
+          <li>
+            <a class="link-icon" href="pages/page5.html">
+              <img src="../img/shoppingCartIcon.svg" alt="Shoppin Cart icon" />
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="container login-container">
+        <h1>Inicio de sesion</h1>
+        <div class="form-login-wrapper">
+          <!-- Formulario agregado -->
+          <form
+            id="contacto"
+            method="post"
+            action="#"
+            aria-label="Formulario de contacto"
+          >
+            <div>
+              <label for="email">Email:</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="tu@ejemplo.com"
+                required
+              />
+            </div>
+            <div>
+              <label for="nombre">Contraseña</label>
+              <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="contraseña"
+                required
+              />
+            </div>
+
+            <div class="missing-password">
+              <a href="">¿Olvidaste tu contraseña?</a>
+            </div>
+            <button type="submit">Iniciar sesion</button>
+            <div class="create-account">
+              <p>¿No tenés cuenta aún? <a href="">Crear cuenta</a></p>
+            </div>
+          </form>
+        </div>
+      </section>
+      <!-- Fin formulario -->
+    </main>
+    <!-- Footer -->
+    <footer>
+      <ul class="container">
+        <li class="logo-container">
+          <div>
+            <img src="../img/logo-white.svg" alt="logo white" />
+          </div>
+          <div class="social-media">
+            <img src="../img/twitter.svg" alt="twitter icon" />
+
+            <img src="../img/twitter.svg" alt="twitter icon" />
+            <img src="../img/twitter.svg" alt="twitter icon" />
+            <img src="../img/twitter.svg" alt="twitter icon" />
+            <img src="../img/twitter.svg" alt="twitter icon" />
+          </div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+        </li>
+
+        <li>
+          <ul class="links">
+            <li><p>Productos</p></li>
+            <li><a href="">Mouse</a></li>
+            <li><a href="">Teclado</a></li>
+            <li><a href="">MousePAD</a></li>
+            <li><a href="">Joystick</a></li>
+            <li><a href="">Accesorios</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <!-- Buscar -->
+          <div class="search-wrapper">
+            <form
+              class="search-container"
+              action="#"
+              role="search"
+              aria-label="Buscar"
+            >
+              <label for="site-search" class="visually-hidden">Buscar</label>
+              <input
+                id="site-search"
+                class="search-input"
+                type="text"
+                name="q"
+                placeholder="Buscar..."
+              />
+              <button class="search-btn" type="submit" aria-label="Buscar">
+                <img
+                  class="icon"
+                  src="../img/searchIcon.svg"
+                  alt="icon search"
+                />
+              </button>
+            </form>
+          </div>
+        </li>
+      </ul>
+      <hr />
+      <p class="copyright">
+        © 2025 King Gaming. Todos los derechos reservados.
+      </p>
+    </footer>
+  </body>
+</html>

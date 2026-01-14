@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>product</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+  </head>
+  <body>
+    <header>
+      <!-- Navbar -->
+      <nav class="container">
+        <ul>
+          <li>
+            <a class="logo" href="../index.html">
+              <img src="../img/logo-color.svg" alt="logo" />
+            </a>
+          </li>
+          <li>
+            <details>
+              <summary>Productos</summary>
+              <ul>
+                <li>
+                  <a href="pages/page1.html">Mouse</a>
+                </li>
+
+                <li>
+                  <a href="pages/page2.html">Teclado</a>
+                </li>
+
+                <li>
+                  <a href="pages/page3.html">Mouse PAD</a>
+                </li>
+
+                <li>
+                  <a href="pages/page4.html">Joystick</a>
+                </li>
+              </ul>
+            </details>
+          </li>
+        </ul>
+
+        <ul>
+          <li>
+            <!-- Buscar -->
+            <div class="search-wrapper">
+              <form
+                class="search-container"
+                action="#"
+                role="search"
+                aria-label="Buscar"
+              >
+                <label for="site-search" class="visually-hidden">Buscar</label>
+                <input
+                  id="site-search"
+                  class="search-input"
+                  type="text"
+                  name="q"
+                  placeholder="Buscar..."
+                />
+                <button class="search-btn" type="submit" aria-label="Buscar">
+                  <img
+                    class="icon"
+                    src="../img/searchIcon.svg"
+                    alt="icon search"
+                  />
+                </button>
+              </form>
+            </div>
+          </li>
+
+          <!-- Login -->
+          <li>
+            <a class="link-icon" href="../pages/login.html">
+              <img src="../img/loginIcon.svg" alt="" />
+            </a>
+          </li>
+
+          <!-- Cart -->
+          <li>
+            <a class="link-icon" href="pages/page5.html">
+              <img src="../img/shoppingCartIcon.svg" alt="" />
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="container">
+        <div class="product-container">
+          <div class="product-gallery">
+            <div class="thumbnails">
+              <img src="../img/31951_1_small.webp" alt="Thumbnail 1" />
+              <img src="../img/31951_3_small.webp" alt="Thumbnail 2" />
+              <img src="../img/31951_4_small.webp" alt="Thumbnail 3" />
+              <img src="../img/31951_5_small.webp" alt="Thumbnail 4" />
+            </div>
+            <img
+              class="product-image"
+              src="../img/mouse.webp"
+              alt="product image"
+            />
+          </div>
+
+          <div class="product-details">
+            <div>
+              <span class="brand">scyrox</span>
+              <h2 class="name">V8 Wireless 8k Superlight</h2>
+              <h1 class="price">$104.999</h1>
+            </div>
+
+            <div class="badge-container">
+              <span class="shipping badge">Envio Gratis</span>
+              <span class="safe-shopping badge">Compra protegida</span>
+            </div>
+
+            <div>
+              <label for="color">Color:</label>
+              <div class="color-container">
+                <input type="radio" name="color" id="white" checked />
+                <input type="radio" name="color" id="black" />
+              </div>
+            </div>
+
+            <div>
+              <div>
+                <label for="quantity">Cantidad:</label>
+                <form class="product-form" action="#" method="post">
+                  <div>
+                    <button>+</button>
+                    <input
+                      type="number"
+                      id="quantity"
+                      name="quantity"
+                      value="1"
+                      min="1"
+                      max="10"
+                    />
+
+                    <button>-</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <button type="submit" class="add-to-cart-btn">
+              Agregar al carrito
+            </button>
+          </div>
+        </div>
+
+        <div class="description-container">
+          <div class="details">
+            <h2>Scyrox V8 – Wireless 8k Superlight Gaming Mouse</h2>
+
+            <p>
+              l Scyrox V8 es un mouse gaming ultraligero de tan solo 39 g (±3 g)
+              con forma simétrica y joroba trasera para soporte de palma. Monta
+              el sensor PixArt PAW3950, soporta hasta 30 000 DPI y polling rate
+              de 8000 Hz con el dongle incluido. Cuenta con switches ópticos
+              Omron, MCU Nordic52840, recubrimiento mate y skates PTFE
+              intercambiables. Batería de 250 mAh y diseño pop‑up packaging.
+            </p>
+
+            <img src="../img/11.webp" alt="" />
+          </div>
+
+          <div class="specification">
+            <table class="table-specification">
+              <tbody>
+                <tr>
+                  <th class="table-title">
+                    <p>Especificación</p>
+                  </th>
+                  <th class="table-title">
+                    <p>Detalle</p>
+                  </th>
+                </tr>
+                <tr>
+                  <td>Marca</td>
+                  <td>Scyrox</td>
+                </tr>
+                <tr>
+                  <td>Modelo</td>
+                  <td>V8</td>
+                </tr>
+                <tr>
+                  <td>Sensor</td>
+                  <td>PixArt PAW3950</td>
+                </tr>
+                <tr>
+                  <td>DPI</td>
+                  <td>Hasta 30&nbsp;000</td>
+                </tr>
+                <tr>
+                  <td>Polling Rate</td>
+                  <td>8000&nbsp;Hz</td>
+                </tr>
+                <tr>
+                  <td>IPS</td>
+                  <td>750</td>
+                </tr>
+                <tr>
+                  <td>Aceleración</td>
+                  <td>50&nbsp;G</td>
+                </tr>
+                <tr>
+                  <td>MCU</td>
+                  <td>Nordic52840</td>
+                </tr>
+                <tr>
+                  <td>Switches</td>
+                  <td>Omron ópticos</td>
+                </tr>
+                <tr>
+                  <td>Peso</td>
+                  <td>39&nbsp;g ±&nbsp;3&nbsp;g</td>
+                </tr>
+                <tr>
+                  <td>Dimensiones</td>
+                  <td>118&nbsp;×&nbsp;63&nbsp;×&nbsp;38&nbsp;mm</td>
+                </tr>
+                <tr>
+                  <td>Conectividad</td>
+                  <td>2.4&nbsp;GHz inalámbrico / USB‑C</td>
+                </tr>
+                <tr>
+                  <td>Batería</td>
+                  <td>250&nbsp;mAh</td>
+                </tr>
+                <tr>
+                  <td>Skates</td>
+                  <td>PTFE (set grande y pequeño)</td>
+                </tr>
+                <tr>
+                  <td>Packaging</td>
+                  <td>Pop‑up patented design</td>
+                </tr>
+                <tr>
+                  <td>Colores</td>
+                  <td>Negro / Blanco / Amarillo</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <ul class="container">
+        <li class="logo-container">
+          <div>
+            <img src="../img/logo-white.svg" alt="logo white" />
+          </div>
+          <div class="social-media">
+            <img src="img/twitter.svg" alt="twitter icon" />
+
+            <img src="img/twitter.svg" alt="twitter icon" />
+            <img src="img/twitter.svg" alt="twitter icon" />
+            <img src="img/twitter.svg" alt="twitter icon" />
+            <img src="img/twitter.svg" alt="twitter icon" />
+          </div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+        </li>
+
+        <li>
+          <ul class="links">
+            <li><p>Productos</p></li>
+            <li><a href="">Mouse</a></li>
+            <li><a href="">Teclado</a></li>
+            <li><a href="">MousePAD</a></li>
+            <li><a href="">Joystick</a></li>
+            <li><a href="">Accesorios</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <!-- Buscar -->
+          <div class="search-wrapper">
+            <form
+              class="search-container"
+              action="#"
+              role="search"
+              aria-label="Buscar"
+            >
+              <label for="site-search" class="visually-hidden">Buscar</label>
+              <input
+                id="site-search"
+                class="search-input"
+                type="text"
+                name="q"
+                placeholder="Buscar..."
+              />
+              <button class="search-btn" type="submit" aria-label="Buscar">
+                <img
+                  class="icon"
+                  src="../img/searchIcon.svg"
+                  alt="icon search"
+                />
+              </button>
+            </form>
+          </div>
+        </li>
+      </ul>
+      <hr />
+      <p class="copyright">
+        © 2025 King Gaming. Todos los derechos reservados.
+      </p>
+    </footer>
+  </body>
+</html>
