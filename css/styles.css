@@ -46,8 +46,8 @@
 	url('../fonts/Saira font/Saira-ExtraBold.woff') format('woff');
 	font-weight: 800;
 	font-style: extra-bold;
-}
 
+}
 
 
 :root{
@@ -57,6 +57,8 @@
 	--accent-color: #1065F5;
 	--primary-font: 'Teko', sans-serif;
 	--secondary-font: 'Saira', Arial, sans-serif;
+
+	
 }
 
 
