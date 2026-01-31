@@ -1,0 +1,16 @@
+//reset
+@use "base/reset";
+
+//bootstrap customizations
+@use "bootstrap/custom";
+
+//index page
+@use "pages/index";
+
+// product page
+@use "pages/product";
+
+// login page
+@use "pages/login";
+
+@use "layout/mediaMobile";
