@@ -10,6 +10,26 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/styles.css" />
+
+    <!-- Favicon -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="img/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="img/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="img/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="img/favicon/site.webmanifest" />
   </head>
   <body>
     <header>
@@ -96,6 +116,24 @@
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
+                  Auriculares
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">GRAVASTAR</a></li>
+                  <li><a class="dropdown-item" href="#">MOONDROP</a></li>
+                  <li><a class="dropdown-item" href="#">MCHOSE</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="navbarDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
                   MousePAD
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -143,83 +181,6 @@
           </div>
         </div>
       </nav>
-
-      <!-- Navbar Desktop -->
-      <!--       <nav class="container">
-        <ul>
-          <li>
-            <a class="logo" href="index.html">
-              <img src="img/logo-color.svg" alt="logo" />
-            </a>
-          </li>
-          <li class="desktop-links">
-            <details>
-              <summary>Productos</summary>
-              <ul>
-                <li>
-                  <a href="pages/page1.html">Mouse</a>
-                </li>
-
-                <li>
-                  <a href="pages/page2.html">Teclado</a>
-                </li>
-
-                <li>
-                  <a href="pages/page3.html">Mouse PAD</a>
-                </li>
-
-                <li>
-                  <a href="pages/page4.html">Joystick</a>
-                </li>
-              </ul>
-            </details>
-          </li>
-        </ul>
-
-        <ul class="destop-buttons">
-          <li>
-            
-            <div class="search-wrapper">
-              <form
-                class="search-container"
-                action="#"
-                role="search"
-                aria-label="Buscar"
-              >
-                <label for="site-search" class="visually-hidden">Buscar</label>
-                <input
-                  id="site-search"
-                  class="search-input"
-                  type="text"
-                  name="q"
-                  placeholder="Buscar..."
-                />
-                <button class="search-btn" type="submit" aria-label="Buscar">
-                  <img
-                    class="icon"
-                    src="img/searchIcon.svg"
-                    alt="icon search"
-                  />
-                </button>
-              </form>
-            </div>
-          </li>
-
-
-          <li>
-            <a class="link-icon" href="pages/login.html">
-              <img src="img/loginIcon.svg" alt="" />
-            </a>
-          </li>
-
-
-          <li>
-            <a class="link-icon" href="pages/page5.html">
-              <img src="img/shoppingCartIcon.svg" alt="" />
-            </a>
-          </li>
-        </ul>
-      </nav> -->
     </header>
 
     <main>
@@ -271,19 +232,22 @@
         <div class="container">
           <div>
             <h3>lo mas vendido</h3>
-
-            <hr />
           </div>
 
           <ul class="product-list">
             <li>
               <!-- Card -->
               <div class="card-product">
+                <span class="brand">Scyrox</span>
                 <div class="image-container">
-                  <span class="badge stock">EN STOCK</span>
-                  <span class="badge shipping">ENVIO GRATIS</span>
-                  <span class="brand">Scyrox</span>
-                  <img src="img/mouse.webp" alt="product image" />
+                  <!-- <span class="badge stock">EN STOCK</span> -->
+                  <!-- <span class="badge shipping">ENVIO GRATIS</span> -->
+                  <img
+                    class="hover-img"
+                    src="/img/mouse2.webp"
+                    alt="mouse image 2"
+                  />
+                  <img src="/img/mouse.webp" alt="mouse image 1" />
                 </div>
 
                 <div class="details">
@@ -297,70 +261,85 @@
             <li>
               <!-- Card -->
               <div class="card-product">
+                <span class="brand">ATK</span>
                 <div class="image-container">
-                  <span class="badge stock">EN STOCK</span>
-                  <span class="badge shipping">ENVIO GRATIS</span>
-                  <span class="brand">Scyrox</span>
-                  <img src="img/mouse.webp" alt="product image" />
+                  <img
+                    class="hover-img"
+                    src="/img/mousePAD2.webp"
+                    alt="mouse PAD image 2"
+                  />
+                  <img src="/img/mousePAD.webp" alt="mouse PAD image 1" />
                 </div>
 
                 <div class="details">
-                  <p class="name">V8 Wireless 8k Superlight</p>
+                  <p class="name">X Leviatan</p>
+                  <p class="sale-price">
+                    $104.999 <span class="regular-price">$86.776,03</span>
+                  </p>
+
+                  <a href="pages/product.html">COMPRAR</a>
+                </div>
+              </div>
+            </li>
+
+            <li aria-disabled="true">
+              <!-- Card -->
+              <div class="card-product disabled">
+                <span class="brand">Irok</span>
+                <div class="image-container">
+                  <img
+                    class="hover-img"
+                    src="/img/teclado2.webp"
+                    alt="teclado image 2"
+                  />
+                  <img src="/img/teclado.webp" alt="teclado image 1" />
+                </div>
+
+                <div class="details">
+                  <p class="name">Mercury 68 Contour Lines - Magnetic Switch</p>
+                  <p class="price">$99.999,00</p>
+                  <a href="pages/product.html">COMPRAR</a>
+                </div>
+              </div>
+            </li>
+
+            <li aria-disabled="true">
+              <!-- Card -->
+              <div class="card-product disabled">
+                <span class="brand">8BitDo</span>
+                <div class="image-container">
+                  <img
+                    class="hover-img"
+                    src="/img/joystick2.webp"
+                    alt="joystick image 2"
+                  />
+                  <img src="/img/joystick.webp" alt="joystick image 1" />
+                </div>
+
+                <div class="details">
+                  <p class="name">Ultimate 2 wireless</p>
                   <p class="price">$104.999</p>
                   <a href="pages/product.html">COMPRAR</a>
                 </div>
               </div>
             </li>
 
-            <li>
+            <li aria-disabled="true">
               <!-- Card -->
-              <div class="card-product">
+              <div class="card-product disabled">
+                <span class="brand">Mchose</span>
                 <div class="image-container">
-                  <span class="badge stock">EN STOCK</span>
-                  <span class="badge shipping">ENVIO GRATIS</span>
-                  <span class="brand">Scyrox</span>
-                  <img src="img/mouse.webp" alt="product image" />
+                  <img
+                    class="hover-img"
+                    src="/img/headphones2.webp"
+                    alt="headphones image 2"
+                  />
+                  <img src="/img/headphones.webp" alt="headphones image 1" />
                 </div>
 
                 <div class="details">
-                  <p class="name">V8 Wireless 8k Superlight</p>
-                  <p class="price">$104.999</p>
-                  <a href="pages/product.html">COMPRAR</a>
-                </div>
-              </div>
-            </li>
-
-            <li>
-              <!-- Card -->
-              <div class="card-product">
-                <div class="image-container">
-                  <span class="badge stock">EN STOCK</span>
-                  <span class="badge shipping">ENVIO GRATIS</span>
-                  <span class="brand">Scyrox</span>
-                  <img src="img/mouse.webp" alt="product image" />
-                </div>
-
-                <div class="details">
-                  <p class="name">V8 Wireless 8k Superlight</p>
-                  <p class="price">$104.999</p>
-                  <a href="pages/product.html">COMPRAR</a>
-                </div>
-              </div>
-            </li>
-
-            <li>
-              <!-- Card -->
-              <div class="card-product">
-                <div class="image-container">
-                  <span class="badge stock">EN STOCK</span>
-                  <span class="badge shipping">ENVIO GRATIS</span>
-                  <span class="brand">Scyrox</span>
-                  <img src="img/mouse.webp" alt="product image" />
-                </div>
-
-                <div class="details">
-                  <p class="name">V8 Wireless 8k Superlight</p>
-                  <p class="price">$104.999</p>
+                  <p class="name">V9 Pro</p>
+                  <p class="price">$159.999,00</p>
                   <a href="pages/product.html">COMPRAR</a>
                 </div>
               </div>
@@ -384,10 +363,10 @@
           <div class="social-media">
             <img src="img/twitter.svg" alt="twitter icon" />
 
-            <img src="img/twitter.svg" alt="twitter icon" />
-            <img src="img/twitter.svg" alt="twitter icon" />
-            <img src="img/twitter.svg" alt="twitter icon" />
-            <img src="img/twitter.svg" alt="twitter icon" />
+            <img src="img/youtube.svg" alt="twitter icon" />
+            <img src="img/discord.svg" alt="twitter icon" />
+            <img src="img/instagram.svg" alt="twitter icon" />
+            <img src="img/tiktok.svg" alt="twitter icon" />
           </div>
           <p>Tu destino premium para esports y gaming.</p>
         </li>

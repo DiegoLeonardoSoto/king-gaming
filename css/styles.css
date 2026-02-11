@@ -11975,6 +11975,9 @@ header {
   position: relative;
 }
 
+main {
+  font-family: "Saira", Arial, sans-serif;
+}
 main .hero-section {
   background: #1a1a1d;
 }
@@ -12019,14 +12022,33 @@ main .hero-section .hero-container .hero-image {
   display: flex;
   height: 700px;
 }
+main .category-section {
+  background-color: #f57b10;
+}
+main .category-section div {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+}
 main .category-section div h2 {
+  display: inline-block;
+  position: absolute;
+  font-weight: 700;
+  padding: 14px 28px;
+  transform: translateY(-5rem);
+  background: #f57b10;
+  color: white;
+  clip-path: polygon(10% 0%, 90% 0%, 100% 30%, 100% 100%, 70% 100%, 30% 100%, 0% 100%, 0% 30%);
   text-transform: uppercase;
   font-size: 2rem;
 }
 main .category-section div .category-links {
   display: flex;
   justify-content: center;
-  margin-top: 2rem;
+  margin: 5rem 0;
   list-style: none;
   flex-wrap: wrap;
   gap: 1rem;
@@ -12050,21 +12072,42 @@ main .category-section div .category-links li a:hover {
   filter: grayscale(0);
   scale: 1;
 }
+main .products-section div div {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+}
 main .products-section div div h3 {
+  display: inline-block;
+  position: absolute;
+  font-weight: 700;
+  padding: 14px 28px;
+  transform: translateY(-5rem);
+  top: 0;
+  left: 0;
+  background: white;
+  clip-path: polygon(10% 0%, 90% 0%, 100% 30%, 100% 100%, 70% 100%, 30% 100%, 0% 100%, 0% 30%);
   text-transform: uppercase;
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 main .products-section div .product-list {
   display: flex;
   justify-content: space-between;
-  margin-top: 2rem;
+  margin-top: 5rem;
   list-style: none;
   flex-wrap: wrap;
   gap: 1rem;
   padding: 0;
 }
+main .products-section div .product-list li {
+  position: relative;
+  transition: all 1s ease-in-out;
+}
 main .products-section div .product-list li .card-product {
-  border: 1px solid #bcbcbc;
+  border: 3px solid black;
   width: 300px;
   height: 430px;
   display: flex;
@@ -12073,6 +12116,17 @@ main .products-section div .product-list li .card-product {
   padding: 1rem;
   border-radius: 1rem;
   position: relative;
+}
+main .products-section div .product-list li .card-product .image-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
 }
 main .products-section div .product-list li .card-product .image-container .badge {
   font-size: 0.7rem;
@@ -12083,62 +12137,196 @@ main .products-section div .product-list li .card-product .image-container .badg
   background: #f57b10;
   color: white;
 }
-main .products-section div .product-list li .card-product .image-container .brand {
-  font-size: 1rem;
-  font-weight: 700;
-  padding: 0.3rem 0.5rem;
-  border-radius: 1rem;
-  color: #bcbcbc;
-  position: absolute;
-  margin-left: auto;
-  margin-right: auto;
-  left: 0;
-  right: 0;
-  text-align: center;
-  z-index: 1;
-  text-transform: uppercase;
-}
 main .products-section div .product-list li .card-product .image-container .shipping {
   right: 1rem;
   background: green;
 }
+main .products-section div .product-list li .card-product .image-container .hover-img {
+  z-index: 10;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
 main .products-section div .product-list li .card-product .image-container img {
-  margin-top: 1rem;
-  width: 100%;
+  position: absolute;
   height: 100%;
-  object-fit: cover;
-  display: block;
 }
 main .products-section div .product-list li .card-product .details {
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  width: 100%;
   gap: 0.5rem;
-  border-top: 1px solid #bcbcbc;
+  border-top: 3px solid black;
   padding-top: 1rem;
 }
 main .products-section div .product-list li .card-product .details .name {
   font-size: 1rem;
-  font-weight: 400;
+  font-weight: 300;
+  margin: 0;
 }
 main .products-section div .product-list li .card-product .details .price {
   font-size: 2rem;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 1;
+  margin: 0;
+}
+main .products-section div .product-list li .card-product .details .sale-price {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1;
+  margin: 0;
+  color: #1065f5;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 0.5rem;
+}
+main .products-section div .product-list li .card-product .details .sale-price .regular-price {
+  font-size: 1rem;
+  font-weight: 400;
+  text-decoration: line-through;
+  color: #bcbcbc;
 }
 main .products-section div .product-list li .card-product .details a {
-  background: #f57b10;
-  color: white;
+  position: relative;
+  margin-top: 1rem;
+  background: black;
+  font-weight: 900;
+  border: 3px solid black;
   text-decoration: none;
   text-align: center;
   font-size: 1rem;
   padding: 0.5rem;
   border-radius: 0.5rem;
+  width: 100%;
+}
+main .products-section div .product-list li .card-product .details a::after {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  content: "COMPRAR";
+  position: absolute;
+  box-sizing: border-box;
+  border: 3px solid black;
+  box-sizing: content-box;
+  top: -3px;
+  left: -3px;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.5rem;
+  background-color: white;
+  color: black;
+  transition: all 0.3s ease-in-out;
+}
+main .products-section div .product-list li .card-product .brand {
+  position: absolute;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 0.3rem 0.5rem;
+  color: black;
+  top: -1.2rem;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  text-align: center;
+  z-index: 1;
+  text-transform: uppercase;
+  background-color: white;
+}
+main .products-section div .product-list li .card-product:hover .image-container .hover-img {
+  opacity: 1;
+}
+main .products-section div .product-list li .card-product:hover .details a::after {
+  background: #f57b10;
+  color: white;
+  top: -7px;
+}
+main .products-section div .product-list li .card-product .details a:hover::after {
+  background: #1065f5;
+  top: -5px;
+}
+main .products-section div .product-list li .card-product.disabled {
+  border: 3px solid #bcbcbc;
+}
+main .products-section div .product-list li .card-product.disabled .image-container {
+  filter: grayscale(1);
+}
+main .products-section div .product-list li .card-product.disabled .details {
+  border-top: 3px solid #bcbcbc;
+}
+main .products-section div .product-list li .card-product.disabled .details .price {
+  color: #bcbcbc;
+}
+main .products-section div .product-list li .card-product.disabled .details a::after {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  content: "RESERVAR";
+  border: 3px solid #bcbcbc;
+  color: #bcbcbc;
+}
+main .products-section div .product-list li .card-product.disabled .brand {
+  color: #bcbcbc;
+}
+main .products-section div .product-list li .card-product.disabled:hover .details a::after {
+  background: #f51f10;
+  color: white;
+  top: -7px;
+  border: 3px solid black;
+}
+main .products-section div .product-list li .card-product.disabled .details a:hover::after {
+  top: -5px;
+}
+main .products-section div .product-list li::before {
+  content: "EN STOCK";
+  font-weight: 700;
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  width: 100%;
+  height: 1.5rem;
+  text-shadow: -2px -2px 0 #f57b10, -2px -1px 0 #f57b10, -2px 0px 0 #f57b10, -2px 1px 0 #f57b10, -2px 2px 0 #f57b10, -1px -2px 0 #f57b10, -1px -1px 0 #f57b10, -1px 0px 0 #f57b10, -1px 1px 0 #f57b10, -1px 2px 0 #f57b10, 0px -2px 0 #f57b10, 0px -1px 0 #f57b10, 0px 0px 0 #f57b10, 0px 1px 0 #f57b10, 0px 2px 0 #f57b10, 1px -2px 0 #f57b10, 1px -1px 0 #f57b10, 1px 0px 0 #f57b10, 1px 1px 0 #f57b10, 1px 2px 0 #f57b10, 2px -2px 0 #f57b10, 2px -1px 0 #f57b10, 2px 0px 0 #f57b10, 2px 1px 0 #f57b10, 2px 2px 0 #f57b10;
+  color: white;
+  opacity: 1;
+  z-index: 20;
+  transition: all 0.5s ease-in-out;
+}
+main .products-section div .product-list li:hover::before {
+  color: #f57b10;
+  text-shadow: -2px -2px 0 white, -2px -1px 0 white, -2px 0px 0 white, -2px 1px 0 white, -2px 2px 0 white, -1px -2px 0 white, -1px -1px 0 white, -1px 0px 0 white, -1px 1px 0 white, -1px 2px 0 white, 0px -2px 0 white, 0px -1px 0 white, 0px 0px 0 white, 0px 1px 0 white, 0px 2px 0 white, 1px -2px 0 white, 1px -1px 0 white, 1px 0px 0 white, 1px 1px 0 white, 1px 2px 0 white, 2px -2px 0 white, 2px -1px 0 white, 2px 0px 0 white, 2px 1px 0 white, 2px 2px 0 white;
+}
+main .products-section div .product-list li[aria-disabled=true]::before {
+  content: "SIN STOCK";
+  font-family: "Saira", Arial, sans-serif;
+  font-weight: 700;
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  width: 100%;
+  height: 1.5rem;
+  text-shadow: -2px -2px 0 white, -2px -1px 0 white, -2px 0px 0 white, -2px 1px 0 white, -2px 2px 0 white, -1px -2px 0 white, -1px -1px 0 white, -1px 0px 0 white, -1px 1px 0 white, -1px 2px 0 white, 0px -2px 0 white, 0px -1px 0 white, 0px 0px 0 white, 0px 1px 0 white, 0px 2px 0 white, 1px -2px 0 white, 1px -1px 0 white, 1px 0px 0 white, 1px 1px 0 white, 1px 2px 0 white, 2px -2px 0 white, 2px -1px 0 white, 2px 0px 0 white, 2px 1px 0 white, 2px 2px 0 white;
+  color: #bcbcbc;
+  z-index: 20;
+  transition: all 0.5s ease-in-out;
+}
+main .products-section div .product-list li[aria-disabled=true]:hover::before {
+  opacity: 1;
+  text-shadow: -2px -2px 0 RED, -2px -1px 0 RED, -2px 0px 0 RED, -2px 1px 0 RED, -2px 2px 0 RED, -1px -2px 0 RED, -1px -1px 0 RED, -1px 0px 0 RED, -1px 1px 0 RED, -1px 2px 0 RED, 0px -2px 0 RED, 0px -1px 0 RED, 0px 0px 0 RED, 0px 1px 0 RED, 0px 2px 0 RED, 1px -2px 0 RED, 1px -1px 0 RED, 1px 0px 0 RED, 1px 1px 0 RED, 1px 2px 0 RED, 2px -2px 0 RED, 2px -1px 0 RED, 2px 0px 0 RED, 2px 1px 0 RED, 2px 2px 0 RED;
+  color: white;
 }
 main .products-section div .see-more-container {
   text-align: center;
 }
 main .products-section div .see-more-container .see-more {
   margin-top: 2rem;
+  margin-bottom: 5rem;
   background: #1a1a1d;
   color: white;
   border: none;
