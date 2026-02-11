@@ -11919,6 +11919,9 @@ textarea.form-control-lg {
 
 .navbar {
   color: #bcbcbc;
+  font-family: "Saira", Arial, sans-serif;
+  text-transform: uppercase;
+  color: #bcbcbc;
 }
 
 .dropdown-item:hover {
@@ -12009,14 +12012,48 @@ main .hero-section .hero-container .content p {
   font-size: 1.5rem;
 }
 main .hero-section .hero-container .content button {
-  width: 600px;
-  padding: 1rem;
-  font-size: 1.2rem;
-  background: #f57b10;
+  font-family: "Saira", Arial, sans-serif;
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  position: relative;
+  margin-top: 1rem;
+  background: black;
+  font-weight: 900;
+  border: 3px solid white;
+  text-decoration: none;
+  text-align: center;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  width: 70%;
   color: white;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+main .hero-section .hero-container .content button .icon {
+  width: 1.5rem;
+  margin-left: 1rem;
+}
+main .hero-section .hero-container .content button::before {
+  content: "";
+  mix-blend-mode: screen;
+  position: absolute;
+  box-sizing: border-box;
+  border: 3px solid white;
+  box-sizing: content-box;
+  top: -3px;
+  left: -3px;
+  width: 3%;
+  height: 100%;
+  border-radius: 0.5rem;
+  background-color: #f57b10;
+  color: black;
+  transition: all 0.5s ease-in-out;
+}
+main .hero-section .hero-container .content button:hover::before {
+  width: 100%;
 }
 main .hero-section .hero-container .hero-image {
   display: flex;
@@ -12037,13 +12074,13 @@ main .category-section div h2 {
   display: inline-block;
   position: absolute;
   font-weight: 700;
-  padding: 14px 28px;
-  transform: translateY(-5rem);
+  padding: 1rem 2rem;
+  transform: translateY(-4rem);
   background: #f57b10;
   color: white;
   clip-path: polygon(10% 0%, 90% 0%, 100% 30%, 100% 100%, 70% 100%, 30% 100%, 0% 100%, 0% 30%);
   text-transform: uppercase;
-  font-size: 2rem;
+  font-size: 1.4rem;
 }
 main .category-section div .category-links {
   display: flex;
@@ -12084,14 +12121,14 @@ main .products-section div div h3 {
   display: inline-block;
   position: absolute;
   font-weight: 700;
-  padding: 14px 28px;
-  transform: translateY(-5rem);
+  padding: 1rem 2rem;
+  transform: translateY(-4rem);
   top: 0;
   left: 0;
   background: white;
   clip-path: polygon(10% 0%, 90% 0%, 100% 30%, 100% 100%, 70% 100%, 30% 100%, 0% 100%, 0% 30%);
   text-transform: uppercase;
-  font-size: 2rem;
+  font-size: 1.4rem;
 }
 main .products-section div .product-list {
   display: flex;
@@ -12323,18 +12360,51 @@ main .products-section div .product-list li[aria-disabled=true]:hover::before {
 }
 main .products-section div .see-more-container {
   text-align: center;
+  margin-bottom: 5rem;
 }
 main .products-section div .see-more-container .see-more {
-  margin-top: 2rem;
-  margin-bottom: 5rem;
-  background: #1a1a1d;
-  color: white;
-  border: none;
-  padding: 1rem 5rem;
-  font-size: 1rem;
-  border-radius: 8px;
-  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  font-family: "Saira", Arial, sans-serif;
   text-transform: uppercase;
+  font-size: 1.3rem;
+  position: relative;
+  margin-top: 2rem;
+  background: white;
+  font-weight: 900;
+  border: 3px solid black;
+  text-decoration: none;
+  text-align: center;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  padding: 1rem 4rem;
+  color: black;
+  gap: 1rem;
+}
+main .products-section div .see-more-container .see-more img {
+  width: 5rem;
+}
+main .products-section div .see-more-container .see-more::before {
+  content: "";
+  mix-blend-mode: multiply;
+  position: absolute;
+  box-sizing: border-box;
+  border: 3px solid black;
+  box-sizing: content-box;
+  top: -3px;
+  left: -3px;
+  width: 3%;
+  height: 100%;
+  border-radius: 0.5rem;
+  background-color: #f57b10;
+  color: black;
+  transition: all 0.5s ease-in-out;
+}
+main .products-section div .see-more-container .see-more:hover::before {
+  width: 100%;
 }
 
 footer {
@@ -12344,9 +12414,9 @@ footer {
   text-align: center;
   width: 100%;
   bottom: 0;
-  padding-top: 5rem;
 }
-footer ul {
+footer .footer-links {
+  padding: 6rem 1rem;
   list-style: none;
   display: flex;
   flex-direction: row;
@@ -12356,11 +12426,11 @@ footer ul {
   gap: 1rem;
   margin-bottom: 0.5rem;
 }
-footer ul .logo-container {
+footer .footer-links .logo-container {
   width: 16rem;
   gap: 1rem;
 }
-footer ul .logo-container .social-media {
+footer .footer-links .logo-container .social-media {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -12368,25 +12438,25 @@ footer ul .logo-container .social-media {
   flex-wrap: nowrap;
   gap: 1rem;
 }
-footer ul .logo-container .social-media img {
+footer .footer-links .logo-container .social-media img {
   width: 2rem;
   display: block;
 }
-footer ul .logo-container p {
+footer .footer-links .logo-container p {
   text-align: left;
   font-size: 1.5rem;
 }
-footer ul li {
+footer .footer-links li {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: stretch;
   flex-wrap: nowrap;
 }
-footer ul li P {
+footer .footer-links li P {
   text-align: start;
 }
-footer ul li .links {
+footer .footer-links li .links {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -12396,16 +12466,16 @@ footer ul li .links {
   padding: 0;
   margin: 0;
 }
-footer ul li .links p {
+footer .footer-links li .links p {
   color: #bcbcbc;
   margin: 0;
 }
-footer ul li .links li a {
+footer .footer-links li .links li a {
   color: #bcbcbc;
   text-decoration: none;
   transition: all 0.3s ease-in-out;
 }
-footer ul li .links li a:hover {
+footer .footer-links li .links li a:hover {
   color: white;
 }
 footer .copyright {
@@ -12651,6 +12721,25 @@ main .login-container .form-login-wrapper form .create-account {
   text-align: center;
   margin-top: 1rem;
   font-size: 0.9rem;
+}
+
+main .about-us {
+  padding: 6rem 4rem;
+}
+main .about-us img {
+  width: 20rem;
+}
+main .about-us h1 {
+  font-size: 4rem;
+  font-weight: 500;
+  font-family: "Teko", sans-serif;
+  color: #f57b10;
+}
+main .about-us p {
+  font-size: 1.2rem;
+  font-family: "Saira", Arial, sans-serif;
+  color: #1a1a1d;
+  margin-top: 1rem;
 }
 
 @media screen and (max-width: 640px) {

@@ -58,14 +58,48 @@ main {
         }
 
         button {
-          width: 600px;
-          padding: 1rem;
-          font-size: 1.2rem;
-          background: $primary-color;
+          font-family: $secondary-font;
+          text-transform: uppercase;
+          font-size: 1.3rem;
+          position: relative;
+          margin-top: 1rem;
+          background: black;
+          font-weight: 900;
+          border: 3px solid white;
+          text-decoration: none;
+          text-align: center;
+          padding: 0.5rem;
+          border-radius: 0.5rem;
+          width: 70%;
           color: white;
-          border: none;
-          border-radius: 8px;
-          cursor: pointer;
+
+          @include mixinFlex($justify: center, $align: center);
+
+          .icon {
+            width: 1.5rem;
+            margin-left: 1rem;
+          }
+        }
+
+        button::before {
+          content: "";
+          mix-blend-mode: screen;
+          position: absolute;
+          box-sizing: border-box;
+          border: 3px solid white;
+          box-sizing: content-box;
+          top: -3px;
+          left: -3px;
+          width: 3%;
+          height: 100%;
+          border-radius: 0.5rem;
+          background-color: $primary-color;
+          color: black;
+          transition: all 0.5s ease-in-out;
+        }
+
+        button:hover::before {
+          width: 100%;
         }
       }
 
@@ -85,8 +119,8 @@ main {
         display: inline-block;
         position: absolute;
         font-weight: 700;
-        padding: 14px 28px;
-        transform: translateY(-5rem);
+        padding: 1rem 2rem;
+        transform: translateY(-4rem);
         background: #f57b10;
         color: white;
         clip-path: polygon(
@@ -100,7 +134,7 @@ main {
           0% 30%
         );
         text-transform: uppercase;
-        font-size: 2rem;
+        font-size: 1.4rem;
       }
 
       .category-links {
@@ -147,8 +181,8 @@ main {
           display: inline-block;
           position: absolute;
           font-weight: 700;
-          padding: 14px 28px;
-          transform: translateY(-5rem);
+          padding: 1rem 2rem;
+          transform: translateY(-4rem);
           top: 0;
           left: 0;
           background: white;
@@ -163,7 +197,7 @@ main {
             0% 30%
           );
           text-transform: uppercase;
-          font-size: 2rem;
+          font-size: 1.4rem;
         }
       }
 
@@ -415,17 +449,47 @@ main {
 
       .see-more-container {
         text-align: center;
+        margin-bottom: 5rem;
         .see-more {
-          margin-top: 2rem;
-          margin-bottom: 5rem;
-          background: $secondary-color;
-          color: white;
-          border: none;
-          padding: 1rem 5rem;
-          font-size: 1rem;
-          border-radius: 8px;
-          cursor: pointer;
+          @include mixinFlex($justify: center, $align: center);
+          font-family: $secondary-font;
           text-transform: uppercase;
+          font-size: 1.3rem;
+          position: relative;
+          margin-top: 2rem;
+          background: white;
+          font-weight: 900;
+          border: 3px solid black;
+          text-decoration: none;
+          text-align: center;
+          padding: 0.5rem;
+          border-radius: 0.5rem;
+          padding: 1rem 4rem;
+          color: black;
+          gap: 1rem;
+          img {
+            width: 5rem;
+          }
+        }
+
+        .see-more::before {
+          content: "";
+          mix-blend-mode: multiply;
+          position: absolute;
+          box-sizing: border-box;
+          border: 3px solid black;
+          box-sizing: content-box;
+          top: -3px;
+          left: -3px;
+          width: 3%;
+          height: 100%;
+          border-radius: 0.5rem;
+          background-color: $primary-color;
+          color: black;
+          transition: all 0.5s ease-in-out;
+        }
+        .see-more:hover::before {
+          width: 100%;
         }
       }
     }
@@ -439,8 +503,8 @@ footer {
   text-align: center;
   width: 100%;
   bottom: 0;
-  padding-top: 5rem;
-  ul {
+  .footer-links {
+    padding: 6rem 1rem;
     list-style: none;
     @include mixinFlex($justify: space-between);
     gap: 1rem;
