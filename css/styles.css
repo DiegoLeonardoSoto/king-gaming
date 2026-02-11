@@ -12338,16 +12338,13 @@ main .products-section div .see-more-container .see-more {
 }
 
 footer {
+  font-family: "Saira", Arial, sans-serif;
   background-color: #1a1a1d;
   color: white;
   text-align: center;
   width: 100%;
   bottom: 0;
   padding-top: 5rem;
-}
-footer a {
-  color: white;
-  text-decoration: none;
 }
 footer ul {
   list-style: none;
@@ -12359,6 +12356,26 @@ footer ul {
   gap: 1rem;
   margin-bottom: 0.5rem;
 }
+footer ul .logo-container {
+  width: 16rem;
+  gap: 1rem;
+}
+footer ul .logo-container .social-media {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 1rem;
+}
+footer ul .logo-container .social-media img {
+  width: 2rem;
+  display: block;
+}
+footer ul .logo-container p {
+  text-align: left;
+  font-size: 1.5rem;
+}
 footer ul li {
   display: flex;
   flex-direction: column;
@@ -12366,30 +12383,30 @@ footer ul li {
   align-items: stretch;
   flex-wrap: nowrap;
 }
-footer .logo-container {
-  width: 12rem;
-  gap: 1rem;
+footer ul li P {
+  text-align: start;
 }
-footer .logo-container p {
-  text-align: left;
-}
-footer .links {
+footer ul li .links {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: flex-start;
   flex-wrap: nowrap;
+  gap: 1rem;
+  padding: 0;
+  margin: 0;
 }
-footer .social-media {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: nowrap;
+footer ul li .links p {
+  color: #bcbcbc;
+  margin: 0;
 }
-footer .social-media img {
-  width: 1.5rem;
-  display: block;
+footer ul li .links li a {
+  color: #bcbcbc;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+footer ul li .links li a:hover {
+  color: white;
 }
 footer .copyright {
   font-size: 0.9rem;

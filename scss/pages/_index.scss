@@ -433,51 +433,67 @@ main {
 }
 
 footer {
+  font-family: $secondary-font;
   background-color: $secondary-color;
   color: white;
   text-align: center;
   width: 100%;
   bottom: 0;
   padding-top: 5rem;
-
-  a {
-    color: white;
-    text-decoration: none;
-  }
-
   ul {
     list-style: none;
     @include mixinFlex($justify: space-between);
     gap: 1rem;
     margin-bottom: 0.5rem;
 
+    .logo-container {
+      width: 16rem;
+      gap: 1rem;
+      .social-media {
+        @include mixinFlex($justify: flex-start, $align: center);
+        gap: 1rem;
+        img {
+          width: 2rem;
+          display: block;
+        }
+      }
+      p {
+        text-align: left;
+        font-size: 1.5rem;
+      }
+    }
     li {
       @include mixinFlex($direction: column);
-    }
-  }
+      P {
+        text-align: start;
+      }
+      .links {
+        @include mixinFlex(
+          $direction: column,
+          $justify: flex-start,
+          $align: flex-start
+        );
+        gap: 1rem;
+        padding: 0;
+        margin: 0;
 
-  .logo-container {
-    width: 12rem;
-    gap: 1rem;
-    p {
-      text-align: left;
-    }
-  }
+        p {
+          color: $gray-color;
+          margin: 0;
+        }
 
-  .links {
-    @include mixinFlex(
-      $direction: column,
-      $justify: space-between,
-      $align: flex-start
-    );
-  }
+        li {
+          a {
+            color: $gray-color;
+            text-decoration: none;
+            transition: all 0.3s ease-in-out;
+          }
 
-  .social-media {
-    @include mixinFlex($justify: space-between, $align: center);
-
-    img {
-      width: 1.5rem;
-      display: block;
+          a:hover {
+            color: white;
+          }
+        }
+      }
     }
   }
 
