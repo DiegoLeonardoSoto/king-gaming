@@ -1,0 +1,237 @@
+//variables
+@use "../utilities/variables" as *;
+
+//mixins
+@use "../utilities/mixin" as *;
+
+@media screen and (min-width: 641px) and (max-width: 1024px) {
+  main {
+    //index page styles
+    .container {
+      max-width: 600px;
+      padding: 1.5rem 0;
+    }
+
+    .link-icon {
+      width: 3rem;
+    }
+
+    .logo {
+      width: 10rem;
+    }
+
+    .hero-section {
+      .hero-container {
+        flex-direction: column;
+        padding: 7rem 1rem;
+        align-items: center;
+        gap: 2rem;
+
+        .content {
+          width: 100%;
+          margin: 0;
+
+          h1 {
+            margin: 0;
+            font-size: 6rem;
+          }
+
+          p {
+            margin: 0;
+          }
+
+          button {
+            width: auto;
+            padding: 1rem 2rem;
+          }
+
+          button::before {
+            width: 100%;
+          }
+        }
+
+        .hero-image {
+          width: 100%;
+          overflow: hidden;
+          margin: 0;
+          padding: 0;
+
+          img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+          }
+
+          .desktop-image {
+            display: none;
+          }
+
+          .tablet-image {
+            display: block;
+          }
+        }
+      }
+    }
+
+    .category-section {
+      div {
+        .category-links {
+          padding: 1rem 0;
+
+          li {
+            a {
+              filter: grayscale(0);
+              scale: 1;
+              width: 250px;
+            }
+          }
+        }
+      }
+    }
+
+    .products-section {
+      div {
+        .product-list {
+          flex-direction: row;
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 2rem;
+
+          li {
+            .card-product {
+              width: 270px;
+              .details {
+                .sale-price {
+                  flex-direction: column;
+                  align-items: start;
+                }
+                a::after {
+                  background: $primary-color;
+                  color: white;
+                  top: -5px;
+                }
+              }
+            }
+
+            .card-product.disabled {
+              .details {
+                a::after {
+                  background: $red-color;
+                  color: white;
+                  top: -5px;
+                  border: 2px solid black;
+                }
+              }
+            }
+          }
+        }
+
+        .see-more-container {
+          .see-more {
+            padding: 1rem 3rem;
+            font-size: 1.1rem;
+
+            img {
+              width: 5rem;
+            }
+          }
+
+          .see-more::before {
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    //product page styles
+    section {
+      .product-container {
+        flex-direction: column;
+        margin: 5rem 1rem;
+        gap: 10rem;
+
+        .carousel {
+          .carousel-indicators {
+            height: 6rem;
+            margin-bottom: -7rem;
+          }
+        }
+
+        .product-details {
+          gap: 1.5rem;
+
+          div {
+            .brand {
+              font-size: 1.1rem;
+            }
+
+            .name {
+              font-size: 1.3rem;
+            }
+
+            .price {
+              font-size: 2rem;
+            }
+          }
+
+          .badge-container {
+            .badge {
+              font-size: 1rem;
+              padding: 0.5rem 1rem;
+            }
+          }
+
+          div {
+            .color-container {
+              #white,
+              #black {
+                width: 4rem;
+                height: 4rem;
+              }
+
+              #white::before,
+              #black::before {
+                width: 2rem;
+                height: 2rem;
+              }
+
+              #white:checked::before,
+              #black:checked::before {
+                transform: scale(1.2);
+              }
+            }
+          }
+
+          button[type="submit"]::after {
+            background-color: #f57b10;
+            color: white;
+            top: -10px;
+          }
+        }
+      }
+
+      .description-container {
+        flex-direction: column;
+        gap: 2rem;
+      }
+    }
+
+    //login page styles
+    .login-container {
+      .form-login-wrapper {
+        width: 80%;
+        max-width: 500px;
+      }
+    }
+  }
+
+  footer {
+    .footer-links {
+      max-width: 600px;
+      padding: 4rem 1rem;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 2rem;
+    }
+  }
+}

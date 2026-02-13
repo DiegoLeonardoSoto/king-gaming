@@ -12059,6 +12059,9 @@ main .hero-section .hero-container .hero-image {
   display: flex;
   height: 700px;
 }
+main .hero-section .hero-container .hero-image .tablet-image {
+  display: none;
+}
 main .category-section {
   background-color: #f57b10;
 }
@@ -12968,6 +12971,160 @@ main .container .about-us ul li img {
     padding: 5rem 0;
     flex-direction: column;
     gap: 3rem;
+  }
+}
+@media screen and (min-width: 641px) and (max-width: 1024px) {
+  main .container {
+    max-width: 600px;
+    padding: 1.5rem 0;
+  }
+  main .link-icon {
+    width: 3rem;
+  }
+  main .logo {
+    width: 10rem;
+  }
+  main .hero-section .hero-container {
+    flex-direction: column;
+    padding: 7rem 1rem;
+    align-items: center;
+    gap: 2rem;
+  }
+  main .hero-section .hero-container .content {
+    width: 100%;
+    margin: 0;
+  }
+  main .hero-section .hero-container .content h1 {
+    margin: 0;
+    font-size: 6rem;
+  }
+  main .hero-section .hero-container .content p {
+    margin: 0;
+  }
+  main .hero-section .hero-container .content button {
+    width: auto;
+    padding: 1rem 2rem;
+  }
+  main .hero-section .hero-container .content button::before {
+    width: 100%;
+  }
+  main .hero-section .hero-container .hero-image {
+    width: 100%;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+  }
+  main .hero-section .hero-container .hero-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  main .hero-section .hero-container .hero-image .desktop-image {
+    display: none;
+  }
+  main .hero-section .hero-container .hero-image .tablet-image {
+    display: block;
+  }
+  main .category-section div .category-links {
+    padding: 1rem 0;
+  }
+  main .category-section div .category-links li a {
+    filter: grayscale(0);
+    scale: 1;
+    width: 250px;
+  }
+  main .products-section div .product-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+  }
+  main .products-section div .product-list li .card-product {
+    width: 270px;
+  }
+  main .products-section div .product-list li .card-product .details .sale-price {
+    flex-direction: column;
+    align-items: start;
+  }
+  main .products-section div .product-list li .card-product .details a::after {
+    background: #f57b10;
+    color: white;
+    top: -5px;
+  }
+  main .products-section div .product-list li .card-product.disabled .details a::after {
+    background: #f51f10;
+    color: white;
+    top: -5px;
+    border: 2px solid black;
+  }
+  main .products-section div .see-more-container .see-more {
+    padding: 1rem 3rem;
+    font-size: 1.1rem;
+  }
+  main .products-section div .see-more-container .see-more img {
+    width: 5rem;
+  }
+  main .products-section div .see-more-container .see-more::before {
+    width: 100%;
+  }
+  main section .product-container {
+    flex-direction: column;
+    margin: 5rem 1rem;
+    gap: 10rem;
+  }
+  main section .product-container .carousel .carousel-indicators {
+    height: 6rem;
+    margin-bottom: -7rem;
+  }
+  main section .product-container .product-details {
+    gap: 1.5rem;
+  }
+  main section .product-container .product-details div .brand {
+    font-size: 1.1rem;
+  }
+  main section .product-container .product-details div .name {
+    font-size: 1.3rem;
+  }
+  main section .product-container .product-details div .price {
+    font-size: 2rem;
+  }
+  main section .product-container .product-details .badge-container .badge {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+  }
+  main section .product-container .product-details div .color-container #white,
+  main section .product-container .product-details div .color-container #black {
+    width: 4rem;
+    height: 4rem;
+  }
+  main section .product-container .product-details div .color-container #white::before,
+  main section .product-container .product-details div .color-container #black::before {
+    width: 2rem;
+    height: 2rem;
+  }
+  main section .product-container .product-details div .color-container #white:checked::before,
+  main section .product-container .product-details div .color-container #black:checked::before {
+    transform: scale(1.2);
+  }
+  main section .product-container .product-details button[type=submit]::after {
+    background-color: #f57b10;
+    color: white;
+    top: -10px;
+  }
+  main section .description-container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  main .login-container .form-login-wrapper {
+    width: 80%;
+    max-width: 500px;
+  }
+  footer .footer-links {
+    max-width: 600px;
+    padding: 4rem 1rem;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2rem;
   }
 }
 
