@@ -1,3 +1,9 @@
+//variables
+@use "../utilities/variables" as *;
+
+//mixins
+@use "../utilities/mixin" as *;
+
 @media screen and (max-width: 640px) {
   main {
     //index page styles
@@ -27,7 +33,7 @@
 
         .content {
           width: 100%;
-
+          margin: 0;
           h1 {
             font-size: 5rem;
           }
@@ -35,12 +41,16 @@
           button {
             width: 100%;
           }
+
+          button::before {
+            width: 100%;
+          }
         }
 
         .hero-image {
           max-width: 330px;
           margin: 0 auto;
-          padding: 1rem 0;
+          padding: 3rem 0;
           height: auto;
 
           img {
@@ -73,6 +83,42 @@
         .product-list {
           flex-direction: column;
           align-items: center;
+          gap: 3rem;
+          li {
+            .card-product {
+              .details {
+                a::after {
+                  background: $primary-color;
+                  color: white;
+                  top: -7px;
+                }
+              }
+            }
+
+            .card-product.disabled {
+              .details {
+                a::after {
+                  background: $red-color;
+                  color: white;
+                  top: -7px;
+                  border: 3px solid black;
+                }
+              }
+            }
+          }
+        }
+
+        .see-more-container {
+          .see-more {
+            padding: 1rem 2rem;
+            font-size: 1rem;
+            img {
+              width: 4rem;
+            }
+          }
+          .see-more::before {
+            width: 100%;
+          }
         }
       }
     }
@@ -156,6 +202,16 @@
       .form-login-wrapper {
         width: 100%;
       }
+    }
+  }
+
+  footer {
+    .footer-links {
+      max-width: 330px;
+      margin: 0 auto;
+      padding: 5rem 0;
+      flex-direction: column;
+      gap: 3rem;
     }
   }
 }

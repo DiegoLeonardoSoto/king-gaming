@@ -152,17 +152,7 @@ main {
         }
 
         button[type="submit"] {
-          width: 300px;
-          padding: 0.8rem;
-          font-size: 1.2rem;
-          font-weight: 700;
-          background: $primary-color;
-          font-family: $secondary-font;
-          color: white;
-          border: none;
-          border-radius: 0.7rem;
-          cursor: pointer;
-          text-transform: uppercase;
+          @include fancy-button("Agregar al carrito");
         }
       }
     }

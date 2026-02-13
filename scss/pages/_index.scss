@@ -278,6 +278,11 @@ main {
                 margin: 0;
               }
 
+              .shipping {
+                margin: 0;
+                color: #27b600;
+              }
+
               .sale-price {
                 font-size: 2rem;
                 font-weight: 700;
@@ -524,6 +529,7 @@ footer {
       p {
         text-align: left;
         font-size: 1.5rem;
+        margin: 0;
       }
     }
     li {

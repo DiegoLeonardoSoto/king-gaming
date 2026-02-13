@@ -1,29 +1,71 @@
+//mixins
+@use "../utilities/mixin" as *;
 //variables
 @use "../utilities/variables" as *;
 
-//mixins
-@use "../utilities/mixin" as *;
+header {
+  nav {
+    .container {
+      max-width: 1700px;
+      margin: 0 auto;
+      padding: 1rem;
+    }
+  }
+}
 
 main {
-  .about-us {
-    padding: 6rem 4rem;
+  .container {
+    max-width: 1700px;
+    margin: 0 auto;
+    padding: 1rem;
+    .about-us {
+      padding: 6rem 0;
 
-    img {
-      width: 20rem;
-    }
+      img {
+        width: 20rem;
+      }
 
-    h1 {
-      font-size: 4rem;
-      font-weight: 500;
-      font-family: $primary-font;
-      color: $primary-color;
-    }
+      h1 {
+        font-size: 4rem;
+        font-weight: 500;
+        font-family: $primary-font;
+        color: $primary-color;
+      }
 
-    p {
-      font-size: 1.2rem;
-      font-family: $secondary-font;
-      color: $secondary-color;
-      margin-top: 1rem;
+      p {
+        font-size: 1.2rem;
+        font-family: $secondary-font;
+        color: $secondary-color;
+        margin-top: 1rem;
+
+        span {
+          font-weight: 700;
+        }
+      }
+
+      ul {
+        padding: 0;
+        margin: 2rem 0;
+        gap: 2rem;
+        @include mixinFlex(
+          $direction: column,
+          $justify: flex-start,
+          $align: flex-start
+        );
+        list-style: none;
+
+        li {
+          font-size: 1.3rem;
+          font-family: $secondary-font;
+          color: $secondary-color;
+          gap: 0.5rem;
+
+          img {
+            width: 1.5rem;
+            margin-right: 1rem;
+          }
+        }
+      }
     }
   }
 }
